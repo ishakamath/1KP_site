@@ -5,6 +5,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 	<title>Designathon</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 </head>
 
@@ -20,15 +21,12 @@
 		</div>
 		</div>
 		<div id="links">
-			<h4 class="links_header" onclick="smoothScroll()">about</h4>
-			<h4 class="links_header">schedule</h4>
-			<h4 class="links_header">register</h4>
+			<h4 class="links_header" onclick="smoothScroll(document.getElementById('about'))">about</h4>
+			<h4 class="links_header" onclick="smoothScroll(document.getElementById('schedule'))">schedule</h4>
+			<h4 class="links_header" onclick="smoothScroll(document.getElementById('sponsors'))">sponsors</h4>
+			<h4 class="links_header" onclick="smoothScroll(document.getElementById('register'))">register</h4>
 		</div>
 	</div>
-
-
-
-
 
 	<div class="page" id="about" href="#about">
 		<div>
@@ -47,9 +45,7 @@
 	</div>
 
 
-
-
-	<div class="page" i>
+	<div class="page" id="schedule">
 		<div>
 			<h2>schedule</h2>
 			<p id="title">Saturday, April 28th</p>
@@ -61,7 +57,7 @@
 				<img src="assets/plant2.png" class="right">
 			</div>
 
-			<div class="text_container" id="schedule" >
+			<div class="text_container" id="schedule_container" >
 				<div class="schedule_row">
 					<p>09:30 AM</p>
 					<p>opening ceremony</p>
@@ -80,7 +76,7 @@
 				</div>
 				<div class="schedule_row">
 					<p>04:00 PM</p>
-					<p>keynote</p>
+					<p>panel / judging</p>
 				</div>
 				<div class="schedule_row">
 					<p>05:00 PM</p>
@@ -94,30 +90,142 @@
 		</div>
 	</div>
 
-	<div class="page half">
-		<div class="button unselectable">register</div>
-		<img id="bottom_img" src="assets/footer_1.png">
+	<div class="page" id="workshop">
+		<div>
+			<h2>Workshops</h2>
+		</div>
+		<div class="text_container center" id="paragraph1">
+			<p id="title"> 10 AM - 11 AM / Creative Strategy: Fire Mixtapes / Gina, Sonia, Emmy</p>
+			<p>
+				This workshop will introduce product design and personal branding through a series of fun, interactive exercises. We’ll be going over how to elevate your brand to through consistency, trust and valuing your audience. Join us to creatively strategize and design your next *fire* mixtape drop.
+			</p>
+		</div>
+		<div class="text_container center" id="paragraph1">
+			<p id="title"> 10 AM - 11 AM / Design Sprints / Maicol</p>
+			<p>
+				Maicol is a product designer by trade, currently focused on facilitating Design Sprints for startups. His career highlights include working with a handful of startups for the past five years and most recently concluding a two-year contract at Riot Games as a UX Designer.
+			</p>
+		</div>
+		<div class="text_container center" id="paragraph1">
+			<p id="title"> 11 AM - 12 PM / How to Create & Pitch a Creative Campaign / Digital Operative</p>
+			<p>
+				Run by the digital marketing agency behind Bobble’s creative campaign, this workshop will take you from the initial brief through creative brainstorming, refining and building upon your ideas. The workshop will end with tips on how to express and market those concepts in a client-friendly language.
+			</p>
+		</div>
+		<div class="text_container center" id="paragraph1">
+			<p id="title"> 11 AM - 12 PM / Data Driven Design / Rishabh</p>
+			<p>
+				Industry veteran, recent UCLA alum, and Creative Labs founder, Rishabh will provide up-to-date insights on how to succeed as a designer. This workshop will discuss how people can apply the concept of data-driven design to bring their design skills to the next level.
+			</p>
+		</div>
+	</div>
+
+	<h2>FAQ</h2>
+	<div class="page faq" id="faq">
+		<div class="question-col">
+			<h3> Question </h3>
+			<p> What kind of software or design experience do I need? </p>
+			<p> How will teams work for the contest?</p>
+			<p> Will there be prizes for the contest? </p>
+			<p> What kind of workshops will there be? </p>
+			<p> Is there a dress code? </p>
+			<p> Will there be food provided? </p>
+		</div>
+		<div class="answer-col">
+			<h3> Answer </h3>
+			<p> Workshops:
+				No software or prior experience needed for the workshops.
+
+				Competition:
+				Graphic Design track - Any Adobe Creative tools
+				UI/UX / Product Design track - Sketches can be done through free online software such as Figma or on paper 
+			</p>
+			<p>
+				Come with a team, or join our team facilitation sessions during lunch. Teams must be no more than 2-3 people.
+			</p>
+			<p>
+				Software and hardware prizes include:
+				Intuous Drawing Tablet
+				Amazon Alexa Devices
+				1 Year of Adobe Creative Cloud
+			</p>
+			<p>
+				See <a href="#workshop"> above </a>
+			</p>
+			<p>
+				Casual dress code.
+			</p>
+			<p>
+				We will be providing lunch and snacks throughout the event.
+			</p>
+		</div>
+	</div>
+
+
+	<div class="page" id="sponsors">
+		<h2>Sponsors</h2>
+		<div class="sponsor-container">
+			<div class="tier">
+				<div class="sponsorimg-container">
+					<a href="https://startupucla.com/" target="_blank"><img class="sponsor s1" src="./assets/tier1-1.png" alt=""></a>
+				</div>
+				<div class="sponsorimg-container">
+					<a href="https://www.eatsleepwork.com/" target="_blank"><img class="sponsor s1" src="./assets/tier1-2.jpg" alt=""></a>
+				</div>
+			</div>
+			<div class="tier">
+				<div class="sponsorimg-container">
+					<a href="http://tbwachiatday.com/" target="_blank"><img class="sponsor s2" src="./assets/tier2-1.png" alt=""></a>
+				</div>			
+				<div class="sponsorimg-container">
+					<a href="http://www.vertebrae.com/" target="_blank"><img class="sponsor s2" src="./assets/tier2-2.png" alt=""></a>
+				</div>			
+				<div class="sponsorimg-container">
+					<a href="https://www.digitaloperative.com/" target="_blank"><img class="sponsor s2" src="./assets/tier2-3.jpg" alt=""></a>
+				</div>			
+			</div>
+			<div class="tier">
+				<div class="sponsorimg-container">
+					<a href="http://www.passionplanner.com/" target="_blank"><img class="sponsor s3" src="./assets/tier3-1.png" alt=""></a>
+				</div>			
+				<div class="sponsorimg-container">
+					<a href="https://playfull.com/" target="_blank"><img class="sponsor s3" src="./assets/tier3-2.png" alt=""></a>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+
+	<div class="page halfpage" id="register">
+		<a id="button_link" target="_blank" href="https://goo.gl/forms/BZSTm6R5NSiWd24c2"><div class="button unselectable">register</div></a>
+		<div style="position: relative; height: 100%; color: white; overflow: hidden;">
+
+			<img id="bottom_img" src="assets/footer_1.png">
+			<div class="footer">
+				<p class="white">made with love by</p>
+				<p class="white"><a target="_blank" href="http://www.uclacreatives.com"><span>Creative Labs</span></a> + <a target="_blank" href="http://www.bruinentrepreneurs.org"><span>Bruin Entrepreneurs</span></a></p>
+
+			</div>
+		</div>
 
 	</div>
-		<div class="footer">
-		<p class="white">made with love by</p>
-			<p class="white">Creative Labs + Bruin Entrepreneurs</p>
-	</div>
+
+
 	<script>
-		function smoothScroll(){
-			elmnt = document.getElementById("projects");
-			scrollTo(document.body, elmnt.offsetTop, 600);
-			function scrollTo(element, to, duration) {
-				if (duration <= 0) return;
-				var difference = to - element.scrollTop;
-				var perTick = difference / duration * 10;
-				setTimeout(function() {
-					element.scrollTop = element.scrollTop + perTick;
-					if (element.scrollTop === to) return;
-					scrollTo(element, to, duration - 10);
-				}, 10);
+			function smoothScroll(elmnt){
+				scrollTo(document.documentElement, elmnt.offsetTop, 600);
+
+				function scrollTo(element, to, duration) {
+				    if (duration <= 0) return;
+				    var difference = to - element.scrollTop;
+				    var perTick = difference / duration * 10;
+				    setTimeout(function() {
+				        element.scrollTop = element.scrollTop + perTick;
+				        if (element.scrollTop === to) return;
+				        scrollTo(element, to, duration - 10);
+				    }, 10);
+				}
 			}
-		}
 	</script>
 </body>
 </html>
