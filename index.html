@@ -261,6 +261,10 @@ var colors = {
       opacity: window.colors[color],
       color: color
     });
+    window.addEventListener("resize", () => {
+      	window.canvas.setWidth(window.innerWidth);
+      	window.canvas.setHeight(window.innerHeight);
+    });
     window.canvas.isDrawingMode = true;
     if (!("ontouchstart" in document.documentElement)) {
       window.canvas.on("mouse:move", function(opt) {

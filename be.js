@@ -6,10 +6,6 @@ var offHover = false;
 var num = 0;
 
 $(document).ready(function() {
-	window.addEventListener("resize", () => {
-      window.canvas.setWidth(window.innerWidth);
-      window.canvas.setHeight(window.innerHeight);
-    });
 
 	$(".splash-button").hover(spark, dim);
   	$(".winners").hover(winnersOn, winnersOff);
@@ -157,9 +153,7 @@ function toggleDarkMode() {
     	window.canvas.freeDrawingBrush.opacity = 0.1;
     	window.canvas.freeDrawingBrush.color = "#3DC0EF";
     	window.canvas.freeDrawingBrush.changeColor("#3DC0EF");
-    	
-    	window.canvas.setHeight(window.innerHeight - 1); // get rid of old canvas
-    	window.canvas.setHeight(window.innerHeight); // get rid of old canvas
+    	window.canvas.clear();
 	}
 	else {
 		darkMode = false;
@@ -191,11 +185,11 @@ function toggleDarkMode() {
 		window.colors = {
       		"#F8EC38": 0.15 //natasha yellow
     	};
-    	window.canvas.freeDrawingBrush.color = "#F8EC38";
-    	window.canvas.freeDrawingBrush.opacity = 0.5;
-    	window.canvas.setHeight(window.innerHeight - 1); // get rid of old canvas
-    	window.canvas.setHeight(window.innerHeight); // get rid of old canvas
 
+    	window.canvas.freeDrawingBrush.opacity = 0.15;
+    	window.canvas.freeDrawingBrush.color = "#F8EC38";
+    	window.canvas.freeDrawingBrush.changeColor("#F8EC38");
+    	window.canvas.clear();
 	}
 
 }
