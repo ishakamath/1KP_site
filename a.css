@@ -92,7 +92,8 @@ img {
 }
 
 .left-side-header {
-	width: 50%;
+	/*width: 50%;*/
+	width: 100%;
 	height: 100%;
 	object-position: left;
 }
@@ -314,10 +315,6 @@ img {
 	justify-content: flex-start;
 }
 
-.what-left-text {
-	width: 100%;
-}
-
 .what-left-img {
 	object-position: right;
 	width: 100%;
@@ -381,7 +378,8 @@ img {
 	height: 1.5rem;
 }
 
-.winners {
+.winners, .winners-small {
+	display: flex;
 	width: 100%;
 	height: 100%;
 	position: relative;
@@ -389,15 +387,35 @@ img {
 	cursor: default;
 }
 
+.winners-small {
+	display: none;
+	flex-direction: column;
+	height: auto;
+}
+
 .winner {
 	width: 33.33%;
 	height: 100%;
 }
 
-.winner-img {
+.winner-small {
+	width: 100%;
+	height: auto;
+	margin-top: 0.25rem;
+	margin-bottom: 0.25rem;
+}
+
+.winner-img, .winner-small-img {
 	object-fit: contain;
 	width: 95%;
+	max-width: 20rem;
 	transition: 0.25s ease-in-out;
+}
+
+.winner-small:hover .winner-small-img {
+		transform: scale(1.1);
+		margin-top: 0.5rem;
+		margin-bottom: 0.5rem;
 }
 
 #winner-img1 {
@@ -557,9 +575,6 @@ img {
 	.left-side-header-holder, .right-side-header-holder {
 		height: 7.5rem;
 	}
-	.winners-left-text {
-		margin-bottom: 2rem;
-	}
 }
 
 @media (max-width: 53rem) {
@@ -603,7 +618,7 @@ img {
 		display: block;
 	}
 
-	#winners-container {
+	/*#winners-container {
 		max-height: none;
 		height: auto;
 	}
@@ -646,8 +661,25 @@ img {
 
 	.winners:hover #winner-img3 {
 		padding-top: 0rem;
+	}*/
+	#winners-container {
+		max-height: none;
+		height: auto;
 	}
+	.winners-top-layer {
+		position: relative;
+		margin-bottom: 1.5rem;
+	}
+	.winners-bottom-layer {
+		position: relative;
+	}
+	.winners {
+		display: none;
+	}
+	.winners-small {
+		display: flex;
 
+	}
 }
 
 @media (max-width: 40rem) {
