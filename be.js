@@ -133,6 +133,10 @@ function toggleDarkMode() {
 		document.getElementById('winner-img1').src="assets/winners/winner1-dark.png";
 		document.getElementById('winner-img2').src="assets/winners/winner2-dark.png";
 		document.getElementById('winner-img3').src="assets/winners/winner3-dark.png";
+
+		document.getElementById('winner-small-img1').src="assets/winners/winner1-dark.png";
+		document.getElementById('winner-small-img2').src="assets/winners/winner2-dark.png";
+		document.getElementById('winner-small-img3').src="assets/winners/winner3-dark.png";
 		$(".footer-text").css('color', 'snow');
 
 		//sponsors
@@ -168,6 +172,9 @@ function toggleDarkMode() {
 		document.getElementById('winner-img1').src="assets/winners/winner1.png";
 		document.getElementById('winner-img2').src="assets/winners/winner2.png";
 		document.getElementById('winner-img3').src="assets/winners/winner3.png";
+		document.getElementById('winner-small-img1').src="assets/winners/winner1.png";
+		document.getElementById('winner-small-img2').src="assets/winners/winner2.png";
+		document.getElementById('winner-small-img3').src="assets/winners/winner3.png";
 		$(".footer-text").css('color', 'black');
 
 		//sponsors
