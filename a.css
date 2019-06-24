@@ -589,8 +589,8 @@ img {
 		display: flex;
 	}
 	.navlink {
-		height: 2rem;
-		margin-bottom: 0.5rem;
+		height: 1.5rem;
+		margin-bottom: 0.25rem;
 		width: 50%;
 		margin: 0;
 	}
@@ -599,10 +599,14 @@ img {
 		display: none;
 	}
 	.splash-right {
-		margin-top: 1rem;
-		margin-bottom: 2.5rem;
+		margin-top: 0.25rem;
+		margin-bottom: 2rem;
 		width: 100%;
 		align-items: center;
+		text-align: center;
+	}
+	.splash-right .header {
+		text-align: center;
 	}
 	.splash-text-title {
 		margin-bottom: 1.2rem;
