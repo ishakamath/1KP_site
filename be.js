@@ -188,7 +188,7 @@ function toggleDarkMode() {
 
 		//change paint color
 		window.colors = {
-      		"#F8EC38": 0.1 //natasha yellow
+      		"#F8EC38": 0.15 //natasha yellow
     	};
     	window.canvas.freeDrawingBrush.color = "#F8EC38";
     	window.canvas.freeDrawingBrush.opacity = 0.5;
