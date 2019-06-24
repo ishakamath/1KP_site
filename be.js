@@ -66,7 +66,6 @@ function winnersOff() {
 }
 
 function centerWinners() {
-	console.log("centerWinners");
 	num = $(this).attr("data-winner");
 	if(alreadyHoveringWinner ==  true) {
 		if(num == 1) {
