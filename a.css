@@ -133,10 +133,8 @@ img {
   top: 0;
   width: 100% !important;
   z-index: 0;
-  /*background-color: #F7F4E8;*/
   -webkit-user-select: initial !important;
   cursor: default;
-  /*opacity: 0.5;*/
 }
 
 .upper-canvas {
@@ -358,7 +356,7 @@ img {
 	position: relative;
 	width: 100%;
 	/*height: 47rem;*/
-	height: 70vw;
+	height: 65vw;
 	max-height: 48rem;
 	margin-bottom: 0;
 }
@@ -410,8 +408,11 @@ img {
 .winner-img, .winner-small-img {
 	object-fit: contain;
 	width: 95%;
-	max-width: 20rem;
 	transition: 0.25s ease-in-out;
+}
+
+.winner-small-img {
+	max-width: 20rem;
 }
 
 .winner-small:hover .winner-small-img {
@@ -571,11 +572,7 @@ img {
 	transition: 0;
 }
 
-/* Winners */
 @media (max-width: 62rem) {
-	#winners-container {
-		height: 78vw;
-	}
 	.left-side-header-holder, .right-side-header-holder {
 		height: 7.5rem;
 	}
@@ -623,50 +620,6 @@ img {
 		display: block;
 	}
 
-	/*#winners-container {
-		max-height: none;
-		height: auto;
-	}
-	.winners-top-layer {
-		position: relative;
-	}
-	.winners-bottom-layer {
-		position: relative;
-	}
-	.winners {
-		flex-direction: column;
-		height: auto;
-		width: 100%;
-	}
-	.winner {
-		width: 100%;
-		height: auto;
-		margin-top: 0.25rem;
-		margin-bottom: 0.25rem;
-	}
-	.winner:hover .winner-img {
-		transform: scale(1.1);
-		margin-top: 0.5rem;
-		margin-bottom: 0.5rem;
-	}
-	.winner-img {
-		max-width: 20rem;
-	}
-	#winner-img1, #winner-img2, #winner-img3 {
-		padding-top: 0;
-		width: 100%;
-	}
-	.winners:hover #winner-img1 {
-		padding-top: 0;
-	}
-
-	.winners:hover #winner-img2 {
-		padding-top: 0rem;
-	}
-
-	.winners:hover #winner-img3 {
-		padding-top: 0rem;
-	}*/
 	#winners-container {
 		max-height: none;
 		height: auto;
@@ -683,7 +636,6 @@ img {
 	}
 	.winners-small {
 		display: flex;
-
 	}
 }
 

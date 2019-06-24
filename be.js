@@ -12,14 +12,8 @@ $(document).ready(function() {
     });
 
 	$(".splash-button").hover(spark, dim);
-	if($("#top").css('display') != 'none') {
-      	$(".winners").off("hover");
-		$(".winner").off("hover");
-      }
-      else {
-      	$(".winners").hover(winnersOn, winnersOff);
-		$(".winner").hover(centerWinners, uncenterWinners);
-    }
+  	$(".winners").hover(winnersOn, winnersOff);
+	$(".winner").hover(centerWinners, uncenterWinners);
 
 	$(document).on('click', 'a[href^="#"]', function (event) {
 	    event.preventDefault();
@@ -72,6 +66,7 @@ function winnersOff() {
 }
 
 function centerWinners() {
+	console.log("centerWinners");
 	num = $(this).attr("data-winner");
 	if(alreadyHoveringWinner ==  true) {
 		if(num == 1) {
