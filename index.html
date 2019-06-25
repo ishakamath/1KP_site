@@ -30,7 +30,7 @@
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
 
 	<!--- Mobile --->
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" user-scalable="no" />
+	    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
 
 </head>
 
@@ -56,7 +56,7 @@
 
 	</style>
 	<div class="canvas-container">
-		<canvas id="upper-canvas" class="upper-canvas"> </canvas>
+		<canvas id="up" class="up"> </canvas>
 		<canvas id="canvas" class="lower-canvas"> </canvas>
 	</div>
 	<div class="page flex">
@@ -239,6 +239,7 @@ var canvas;
 var colors = {
       "#F8EC38": 0.15 //natasha yellow
 };
+var mobile = false;
   function paint() {
   	// original yellow: #F8EC38, 0.5 opacity
   	// original purple-pink: "#EC248F", 0.1
@@ -267,11 +268,24 @@ var colors = {
     });
     window.canvas.isDrawingMode = true;
     if (!("ontouchstart" in document.documentElement)) {
+    	console.log("desktop");
+    	// $("body,html,div").css("zIndex", "0");
+    	// $("div").css("zIndex", "1");
+      	// $("div").css("pointerEvents", "none");
+    	// EDITED CODE
+    	document.querySelector(".canvas-container").style.pointerEvents = "auto";
+      // $(".canvas-container").css('display', 'block');
       window.canvas.on("mouse:move", function(opt) {
         window.canvas._onMouseDownInDrawingMode(opt.e);
       });
     } else {
-      document.querySelector(".canvas-container").style.pointerEvents = "none";
+    	mobile = true;
+    	console.log("mobile");
+      // document.querySelector(".canvas-container").style.pointerEvents = "none"; deleted original code
+      // EDITED CODE
+      setTimeout(function() {window.canvas.clear()}, 500);
+      $("body,html,div").css("pointerEvents", "auto");
+
       var x = document.documentElement.clientWidth / 2,
         y = document.documentElement.clientHeight / 2,
         vx = 0, vy = 0,
@@ -285,32 +299,35 @@ var colors = {
           ay = event.accelerationIncludingGravity.y * 5;
         }
 
-        setInterval(function() {
-          var landscapeOrientation = window.innerWidth / window.innerHeight > 1;
-          if (landscapeOrientation) {
-            vx = vx + ay;
-            vy = vy + ax;
-          } else {
-            vy = vy - ay;
-            vx = vx + ax;
-          }
-          vx = vx * 0.98;
-          vy = vy * 0.98;
-          y = parseInt(y + vy / 50);
-          x = parseInt(x + vx / 50);
+        if(mobile != true) {
+          setInterval(function() {
+	          var landscapeOrientation = window.innerWidth / window.innerHeight > 1;
+	          if (landscapeOrientation) {
+	            vx = vx + ay;
+	            vy = vy + ax;
+	          } else {
+	            vy = vy - ay;
+	            vx = vx + ax;
+	          }
+	          vx = vx * 0.98;
+	          vy = vy * 0.98;
+	          y = parseInt(y + vy / 50);
+	          x = parseInt(x + vx / 50);
 
-          boundingBoxCheck();
-          var upperCanvas = document.querySelector(".upper-canvas");
-          var syntheticEvent = syntheticMouseEvent(upperCanvas, {
-            x: x,
-            y: y,
-            target: upperCanvas,
-            relatedTarget: upperCanvas
-          });
-          // canvas.isDrawingMode = true;
-          window.canvas._onMouseDownInDrawingMode(syntheticEvent);
-        }, 20);
-      } 
+	          boundingBoxCheck();
+	          var upperCanvas = document.querySelector(".upper-canvas");
+	          var syntheticEvent = syntheticMouseEvent(upperCanvas, {
+	            x: x,
+	            y: y,
+	            target: upperCanvas,
+	            relatedTarget: upperCanvas
+	          });
+	          // canvas.isDrawingMode = true;
+	          window.canvas._onMouseDownInDrawingMode(syntheticEvent);
+	        }, 20);
+      	} 
+      }
+        
 
 
       function boundingBoxCheck(){

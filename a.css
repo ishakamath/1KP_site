@@ -18,7 +18,14 @@ body {
   font-weight: bold;
   background-color: white;
   cursor: default;
+
+ /* overflow: scroll;
+	-webkit-overflow-scrolling: touch;*/
 }
+
+/*body * {
+	z-index: 1;
+}*/
 
 nav, div {
   position: relative;
@@ -137,7 +144,7 @@ img {
   cursor: default;
 }
 
-.upper-canvas {
+.up {
   cursor: default !important;
 }
 
@@ -327,6 +334,7 @@ img {
 /* FAQ CONTAINER */
 #faq-container {
 	width: 100%;
+	overflow: auto;
 }
 
 .faq-text {
@@ -335,6 +343,8 @@ img {
 	align-items: flex-start;
 	width: 86%;
 	margin-right: 4%;
+	height: auto;
+	overflow: auto;
 }
 
 .faq-img {
