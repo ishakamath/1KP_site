@@ -57,8 +57,8 @@ img {
 }
 
 .container {
+	margin-top: 2rem;
 	max-width: 70rem;
-	margin-bottom: 2rem;
 }
 
 .flex {
@@ -228,10 +228,11 @@ img {
 
 /* SPLASH CONTAINER */
 #splash-container {
+	margin-top: 0rem;
 	width: 100%;
 	justify-content: flex-start;
 	user-select: none;
-	margin-bottom: 3rem;
+	margin-bottom: 1rem;
 }
 
 .splash-img {
@@ -314,6 +315,10 @@ img {
 	object-fit: contain;
 }
 
+.what-left-text-holder {
+	margin-bottom: 1rem;
+}
+
 .what-left {
 	width: 50%;
 	flex-direction: column;
@@ -335,6 +340,7 @@ img {
 #faq-container {
 	width: 100%;
 	overflow: auto;
+	margin-top: 0;
 }
 
 .faq-text {
@@ -368,7 +374,6 @@ img {
 	/*height: 47rem;*/
 	height: 65vw;
 	max-height: 48rem;
-	margin-bottom: 0;
 }
 
 .winners-top-layer {
@@ -477,11 +482,13 @@ img {
 }
 
 #sponsors-header {
+	margin-top: 2rem;
 	width: 100%;
 }
 
 /* SPONSORS CONTAINER */
 #sponsors-container {
+	margin-top: 0;
 	width: 100%;
 	flex-wrap: wrap;
 }
@@ -524,6 +531,7 @@ img {
 	height: 5px;
 	background-color: #9B14F2;
 	width: 100%;
+	margin-top: 2rem;
 }
 
 /* FOOTER */
@@ -700,6 +708,9 @@ img {
 	}
 	.footer-text {
 		margin-top: 1rem;
+	}
+	#winners-container {
+		margin-top: 0.5rem;
 	}
 }
 
