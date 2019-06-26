@@ -68,7 +68,7 @@
 			<a href="#faq-header" class="navlink navlink-light flex">
 				FAQ
 			</a>
-			<a class="navlink navlink-light flex" onclick="toggleDarkMode()">
+			<a class="navlink navlink-light flex navlogo-holder" ontouchstart="touchDarkMode()" ontouchend="touchEndDarkMode()">
 				<img class="navlogo navlogo-light" src="assets/1kp_2019.png">
 			</a>
 			<a href="#winners-container" class="navlink navlink-light flex">
@@ -78,7 +78,7 @@
 				SPONSORS
 			</a>
 			<div class="navbar-small flex">
-				<a class="navlink navlink-light flex" onclick="toggleDarkMode()" style="height: 5rem;">
+				<a class="navlink navlink-light flex navlogo-holder"  style="height: 5rem;">
 					<img class="navlogo navlogo-light" src="assets/1kp_2019.png">
 				</a>
 				<div class="flex navbar-small-text-links">
@@ -268,7 +268,6 @@ var mobile = false;
     });
     window.canvas.isDrawingMode = true;
     if (!("ontouchstart" in document.documentElement)) {
-    	console.log("desktop");
     	// $("body,html,div").css("zIndex", "0");
     	// $("div").css("zIndex", "1");
       	// $("div").css("pointerEvents", "none");
@@ -280,7 +279,6 @@ var mobile = false;
       });
     } else {
     	mobile = true;
-    	console.log("mobile");
       // document.querySelector(".canvas-container").style.pointerEvents = "none"; deleted original code
       // EDITED CODE
       setTimeout(function() {window.canvas.clear()}, 500);

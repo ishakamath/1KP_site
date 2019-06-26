@@ -18,6 +18,12 @@ $(document).ready(function() {
 	        scrollTop: $($.attr(this, 'href')).offset().top
 	    }, 500);
 	});
+
+	if (!("ontouchstart" in document.documentElement)) {
+		$(".navlogo-holder").hover(toggleDarkMode, fakeFunc);
+		$(".navlogo-holder").click(clickNavLogoHolder);
+	}
+
 }
 );
 
@@ -118,8 +124,9 @@ function uncenterWinners() {
 
 var darkMode = false;
 function toggleDarkMode() {
+	console.log("toggleDarkMode");
 	if(darkMode == false) {
-		darkMode = true;
+		// darkMode = true;
 		$("body,html").css("backgroundColor", "black");
 		$(".navlink").removeClass("navlink-light").addClass("navlink-dark");
 		$(".navlogo").removeClass("navlogo-light").addClass("navlogo-dark");
@@ -156,7 +163,7 @@ function toggleDarkMode() {
     	window.canvas.clear();
 	}
 	else {
-		darkMode = false;
+		// darkMode = false;
 		$("body,html").css("backgroundColor", "white");
 		$(".navlink").removeClass("navlink-dark").addClass("navlink-light");
 		$(".navlogo").removeClass("navlogo-dark").addClass("navlogo-light");
@@ -192,4 +199,30 @@ function toggleDarkMode() {
     	window.canvas.clear();
 	}
 
+}
+
+function fakeFunc() {
+	if(darkMode == false) {
+		darkMode = true;
+	}
+	else {
+		darkMode = false;
+	}
+	return;
+}
+
+function clickNavLogoHolder() {
+	console.log('clicked');
+	fakeFunc();
+	toggleDarkMode();
+}
+
+function touchDarkMode() {
+	console.log('touched');
+	toggleDarkMode();
+	fakeFunc();
+}
+
+function touchEndDarkMode() {
+	return;
 }
