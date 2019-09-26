@@ -150,7 +150,7 @@ function toggleDarkMode() {
 		document.getElementById('eighty-two').src="assets/sponsors/eighty-two-dark.png";
 		document.getElementById('ipic').src="assets/sponsors/ipic-dark.png";
 		document.getElementById('tylt').src="assets/sponsors/tylt-dark.png";
-
+		$("#skydeck").addClass("invert");
 
 		//change paint color
 		window.colors = {
@@ -186,6 +186,7 @@ function toggleDarkMode() {
 		document.getElementById('eighty-two').src="assets/sponsors/eighty-two.png";
 		document.getElementById('ipic').src="assets/sponsors/ipic.png";
 		document.getElementById('tylt').src="assets/sponsors/tylt.png";
+		$("#skydeck").removeClass("invert");
 
 
 		//change paint color
