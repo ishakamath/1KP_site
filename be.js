@@ -143,14 +143,9 @@ function toggleDarkMode() {
 		$(".footer-text").css('color', 'snow');
 
 		//sponsors
-		document.getElementById('linode').src="assets/sponsors/linode-dark.png";
-		document.getElementById('sketch').src="assets/sponsors/sketch-dark.png";
 		document.getElementById('ultrapress').src="assets/sponsors/ultrapress-dark.png";
-		document.getElementById('patamar').src="assets/sponsors/patamar-dark.png";
-		document.getElementById('eighty-two').src="assets/sponsors/eighty-two-dark.png";
-		document.getElementById('ipic').src="assets/sponsors/ipic-dark.png";
-		document.getElementById('tylt').src="assets/sponsors/tylt-dark.png";
-		$("#skydeck").addClass("invert");
+		document.getElementById('skydeck').src="assets/sponsors/skydeck-dark.png";
+		document.getElementById('kiwi').src="assets/sponsors/kiwi-dark.png";
 
 		//change paint color
 		window.colors = {
@@ -179,14 +174,9 @@ function toggleDarkMode() {
 		$(".footer-text").css('color', 'black');
 
 		//sponsors
-		document.getElementById('linode').src="assets/sponsors/linode.png";
-		document.getElementById('sketch').src="assets/sponsors/sketch.png";
 		document.getElementById('ultrapress').src="assets/sponsors/ultrapress.png";
-		document.getElementById('patamar').src="assets/sponsors/patamar.png";
-		document.getElementById('eighty-two').src="assets/sponsors/eighty-two.png";
-		document.getElementById('ipic').src="assets/sponsors/ipic.png";
-		document.getElementById('tylt').src="assets/sponsors/tylt.png";
-		$("#skydeck").removeClass("invert");
+		document.getElementById('skydeck').src="assets/sponsors/skydeck.png";
+		document.getElementById('kiwi').src="assets/sponsors/kiwi.png";
 
 
 		//change paint color
